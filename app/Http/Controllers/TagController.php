@@ -10,11 +10,11 @@ class TagController extends Controller
 {
     public function getPostWithTags()
     {           
+        //  $posts = Post::with('tags','getCategory')->query();
          $posts = Post::with('tags','getCategory')->get();
 
-       // return view("posts.index", compact("posts"));
+        //  $posts->get();
+
         return $posts;
-       
-    
 }
 }
