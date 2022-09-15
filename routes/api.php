@@ -31,6 +31,8 @@ Route::get('search','UserController@getuser');
 
 
 Route::get('getPosts','TagController@getPostWithTags');
+Route::get('getPostCategory','PostController@getPostCategory');
+
 
 
 

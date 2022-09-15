@@ -10,11 +10,11 @@ return [
     | This option controls the default authentication "guard" and password
     | reset options for your application. You may change these defaults
     | as required, but they're a perfect start for most applications.
-    |
+    |   
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -44,7 +44,6 @@ return [
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
-            'hash' => false,
         ],
     ],
 

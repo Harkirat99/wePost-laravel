@@ -66,19 +66,19 @@ class UserController extends Controller
     }
 
     public function details(Request $request){
-        // $user = Auth::user(); 
-        //  return response()->json(['success' => $user], $this-> successStatus); 
-        $user = $request->user();
-        if($user){
-            return response()->json(['success user' => $user], $this-> successStatus); 
-        }
-        else{
-            $error = "user not found";
-            return response()->json(['message' => $error], $this-> successStatus);
-        }
+        $user = Auth::user(); 
+         return response()->json(['success' => $user], $this-> successStatus); 
+        // $user = $request->user();
+        // if($user){
+        //     return response()->json(['success user' => $user], $this-> successStatus); 
+        // }
+        // else{
+        //     $error = "user not found";
+        //     return response()->json(['message' => $error], $this-> successStatus);
+        // }
     }
-    public function getuser(){
-        return User::all();
-    }
+    // public function getuser(){
+    //     return User::all();
+    // }
 
 }

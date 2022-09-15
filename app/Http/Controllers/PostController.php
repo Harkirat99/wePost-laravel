@@ -14,8 +14,8 @@ class PostController extends Controller
         // return $result;
         
     }
-//     function getAllPosts(){
-//     $result = Post::find(1)->category;
-// }
+    // public function getPostCategory(){
+    //     $data = Post::with('getCategory')
+    // }
   
  }
