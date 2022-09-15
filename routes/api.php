@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Task;
 use App\Http\Controller\CategoryController;
 use App\Http\Controller\PostController;
+use App\Http\Controller\TagController;
 
 
 
@@ -25,10 +26,11 @@ Route::post('login','UserController@login');
 Route::get('getUser','UserController@details');
 Route::get('search','UserController@getuser');
 
-Route::get('getAllPosts','CategoryController@show');
-Route::get('getpost','PostController@show_category');
+// Route::get('getAllPosts','CategoryController@show');
+// Route::get('getpost','PostController@show_category');
 
 
+Route::get('getPosts','TagController@getPostWithTags');
 
 
 

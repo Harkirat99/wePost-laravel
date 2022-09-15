@@ -14,10 +14,17 @@ class Tag extends Migration
     public function up()
     {
         Schema::create('tags', function (Blueprint $table) {
-            $table->bigIncrements('tag_id');
+            $table->bigIncrements('id');
             $table->string('name');
+        });  
+    
+        Schema::create('post_tag', function (Blueprint $table) {
             $table->integer('post_id');
-        });    }
+            $table->integer('tag_id');
+            $table->primary(['post_id', 'tag_id']);
+            
+       }); 
+    }
 
     /**
      * Reverse the migrations.
